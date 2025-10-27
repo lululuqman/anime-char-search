@@ -1,2 +1,111 @@
-﻿# anime-char-search
+# ⚡ Anime Character Select ⚡
 
+> A 90s-inspired **retro-futuristic anime character search app** powered by the [Jikan API](https://docs.api.jikan.moe/).  
+> Search your favorite anime characters and view their appearances — all wrapped in a nostalgic arcade vibe 🎮✨
+
+---
+
+## 🕹️ Demo
+🔗 **Live App:** [https://anime-char-search.vercel.app](https://anime-char-search.vercel.app)  
+*(Deployed with Vercel)*
+
+![Character Select Preview](https://github.com/your-username/anime-char-search/assets/preview.gif)
+
+---
+
+## 💾 Features
+
+✅ **Real-time Character Search** — Powered by the Jikan API  
+✅ **Retro 90s Game UI** — CRT glow, neon lights, pixel fonts  
+✅ **Responsive Grid Layout** — 4 characters per row  
+✅ **Dynamic Character Modal** — Shows image, aliases, and anime appearances  
+✅ **Favorites Support** *(optional hook ready)*  
+
+---
+
+## 🧰 Tech Stack
+
+| Tech | Description |
+|------|--------------|
+| ⚛️ **React** | Frontend framework |
+| 🎨 **CSS** | Custom 90s game-inspired design |
+| 🌐 **Jikan API** | Anime character data from MyAnimeList |
+| 🚀 **Vercel** | Deployment and hosting |
+| 💾 **Local Storage** | (via hook) Save favorites locally |
+
+---
+
+## 🧩 Project Structure
+
+anime-char-search/
+├── Frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ │ ├── CharacterModal.jsx
+│ │ │ └── CharacterCard.jsx
+│ │ ├── hooks/
+│ │ │ └── useFavorites.js
+│ │ ├── styles/
+│ │ │ ├── CharacterSelect.css
+│ │ │ └── CharacterModal.css
+│ │ └── App.jsx
+│ ├── index.html
+│ ├── package.json
+│ └── vite.config.js
+└── README.md
+
+yaml
+Copy code
+
+---
+
+## ⚙️ Setup & Installation
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/anime-char-search.git
+cd anime-char-search/Frontend
+2️⃣ Install dependencies
+bash
+Copy code
+npm install
+3️⃣ Run locally
+bash
+Copy code
+npm run dev
+4️⃣ Build for production
+bash
+Copy code
+npm run build
+5️⃣ Deploy (Vercel)
+bash
+Copy code
+vercel --prod
+⚙️ Make sure your root directory is set to Frontend/ in Vercel project settings.
+
+🌈 Screenshots
+Character Select Screen
+
+
+Character Modal
+
+
+🪩 Retro Design Inspiration
+Neon blue & magenta palette
+
+CRT scanline overlay
+
+“Press Start 2P” pixel font
+
+Arcade-style glowing borders
+
+🧠 API Reference
+Using the public Jikan API:
+
+bash
+Copy code
+GET https://api.jikan.moe/v4/characters?q={query}&limit=12
+💖 Credits
+Jikan API — for anime character data
+
+Google Fonts — for the retro pixel font
