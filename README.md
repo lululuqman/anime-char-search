@@ -58,7 +58,7 @@ anime-char-search/
 ## ⚙️ Setup & Installation
 
 1️⃣ Clone the repository
-```bash
+bash
 git clone https://github.com/your-username/anime-char-search.git
 cd anime-char-search/Frontend
 2️⃣ Install dependencies
@@ -106,6 +106,7 @@ GET https://api.jikan.moe/v4/characters?q={query}&limit=12
 Jikan API — for anime character data
 
 Google Fonts — for the retro pixel font
+
 
 
 
