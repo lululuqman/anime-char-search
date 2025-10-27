@@ -1,7 +1,7 @@
 # ⚡ Anime Character Select ⚡
 
 > A 90s-inspired **retro-futuristic anime character search app** powered by the [Jikan API](https://docs.api.jikan.moe/).  
-> Search your favorite anime characters and view their appearances — all wrapped in a nostalgic arcade vibe 🎮✨
+> Search your favorite anime characters and view their appearances 🎮✨
 
 ---
 
@@ -19,7 +19,6 @@
 ✅ **Retro 90s Game UI** — CRT glow, neon lights, pixel fonts  
 ✅ **Responsive Grid Layout** — 4 characters per row  
 ✅ **Dynamic Character Modal** — Shows image, aliases, and anime appearances  
-✅ **Favorites Support** *(optional hook ready)*  
 
 ---
 
@@ -42,7 +41,7 @@ anime-char-search/
 │ ├── src/
 │ │ ├── components/
 │ │ │ ├── CharacterModal.jsx
-│ │ │ └── CharacterCard.jsx
+│ │ │ ├── CharacterCard.jsx
 │ │ ├── hooks/
 │ │ │ └── useFavorites.js
 │ │ ├── styles/
@@ -51,11 +50,8 @@ anime-char-search/
 │ │ └── App.jsx
 │ ├── index.html
 │ ├── package.json
-│ └── vite.config.js
-└── README.md
-
-yaml
-Copy code
+│ ├── vite.config.js
+│ └── README.md
 
 ---
 
@@ -109,3 +105,4 @@ GET https://api.jikan.moe/v4/characters?q={query}&limit=12
 Jikan API — for anime character data
 
 Google Fonts — for the retro pixel font
+
