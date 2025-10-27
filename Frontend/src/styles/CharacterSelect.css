@@ -1,0 +1,93 @@
+body {
+  background: radial-gradient(circle at top, #0a0a2a, #000);
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.character-select-container {
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  padding: 2rem 0;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  text-align: center;
+  outline: none;
+  background: #1b1b3a;
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.character-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.character-card {
+  background: rgba(15, 15, 40, 0.9);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease, border 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.character-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.character-card:hover {
+  transform: scale(1.08);
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.character-card.favorite {
+  border: 2px solid #ff007f;
+  box-shadow: 0 0 15px #ff007f;
+}
+
+.character-info {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.2);
+}

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --neon-blue: #00eaff;
+  --neon-magenta: #ff0099;
+  --neon-yellow: #fff600;
+  --bg-dark: #0b0014;
+  --bg-deep: #180030;
+}
+
+.character-select-screen {
+  background: radial-gradient(circle at center, var(--bg-deep) 10%, var(--bg-dark) 90%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+  font-family: "Press Start 2P", monospace;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* CRT Scanline Effect */
+.character-select-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.04) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Title */
+.select-title {
+  font-size: 1rem;
+  color: var(--neon-yellow);
+  text-shadow: 0 0 8px var(--neon-yellow), 0 0 20px var(--neon-blue);
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  animation: flicker 1.5s infinite alternate;
+  z-index: 2;
+}
+
+/* === Character Grid === */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ✅ 4 per row always */
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  justify-items: center;
+  z-index: 2;
+}
+
+/* === Character Card === */
+.character-card {
+  background: linear-gradient(180deg, rgba(10, 0, 30, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%);
+  border: 3px solid var(--neon-blue);
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  width: 200px; /* ✅ fixed width for uniformity */
+  height: 230px;
+  box-shadow: 0 0 12px var(--neon-blue), inset 0 0 8px var(--neon-blue);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.character-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid var(--neon-yellow);
+  box-shadow: 0 0 15px var(--neon-yellow);
+  image-rendering: pixelated;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.character-card p {
+  font-size: 0.55rem;
+  color: #fff;
+  margin-top: 0.5rem;
+  text-shadow: 2px 2px #000;
+}
+
+/* Hover Glow Effect */
+.character-card:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px var(--neon-magenta), 0 0 50px rgba(255, 0, 153, 0.5);
+}
+
+.character-card:hover {
+  border-color: var(--neon-magenta);
+  box-shadow: 0 0 25px var(--neon-magenta), 0 0 50px rgba(255, 0, 153, 0.4);
+  transform: scale(1.05);
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.6;
+  }
+}
+
+/* === Responsive Layout === */
+@media (max-width: 1000px) {
+  .character-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .character-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .character-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .character-card {
+    width: 180px;
+    height: 210px;
+  }
+  .character-card img {
+    height: 130px;
+  }
+  .select-title {
+    font-size: 0.8rem;
+  }
+}
