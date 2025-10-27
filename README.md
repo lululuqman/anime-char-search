@@ -35,7 +35,7 @@
 ---
 
 ## 🧩 Project Structure
-
+```
 anime-char-search/
 ├── Frontend/
 │   ├── src/
@@ -52,34 +52,40 @@ anime-char-search/
 │   ├── package.json
 │   ├── vite.config.js
 │   └── README.md
-
+```
 ---
 
 ## ⚙️ Setup & Installation
 
 1️⃣ Clone the repository
-bash
+```bash
 git clone https://github.com/your-username/anime-char-search.git
 cd anime-char-search/Frontend
+```
 2️⃣ Install dependencies
-bash
+```bash
 Copy code
 npm install
+```
 3️⃣ Run locally
-bash
+```bash
 Copy code
 npm run dev
+```
 4️⃣ Build for production
-bash
+```bash
 Copy code
 npm run build
+```
 5️⃣ Deploy (Vercel)
-bash
+```bash
 Copy code
 vercel --prod
 ⚙️ Make sure your root directory is set to Frontend/ in Vercel project settings.
+```
 
 🌈 Screenshots
+
 Character Select Screen
 <img width="1364" height="835" alt="Screenshot 2025-10-28 021247" src="https://github.com/user-attachments/assets/9d82cbf5-5164-477a-90d2-1b0eba11eaa3" />
 
@@ -91,8 +97,6 @@ Character Modal
 Neon blue & magenta palette
 
 CRT scanline overlay
-
-“Press Start 2P” pixel font
 
 Arcade-style glowing borders
 
