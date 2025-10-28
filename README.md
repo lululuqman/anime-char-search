@@ -1,4 +1,4 @@
-# ⚡ Anime Character Select ⚡
+# ⚡ Anime Character Search ⚡
 
 > A 90s-inspired **retro-futuristic anime character search app** powered by the [Jikan API](https://docs.api.jikan.moe/).  
 > Search your favorite anime characters and view their appearances 🎮✨
@@ -37,6 +37,7 @@ Character Modal
 Jikan API — for anime character data
 
 Google Fonts — for the retro pixel font
+
 
 
 
