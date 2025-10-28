@@ -22,7 +22,6 @@
 | 🎨 **CSS** | Custom 90s game-inspired design |
 | 🌐 **Jikan API** | Anime character data from MyAnimeList |
 | 🚀 **Vercel** | Deployment and hosting |
-| 💾 **Local Storage** | (via hook) Save favorites locally |
 
 ## 🌈 Screenshots
 
@@ -37,6 +36,7 @@ Character Modal
 Jikan API — for anime character data
 
 Google Fonts — for the retro pixel font
+
 
 
 
